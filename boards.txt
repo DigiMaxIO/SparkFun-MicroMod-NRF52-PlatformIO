@@ -1,0 +1,64 @@
+#**********************************************
+# SparkFun NRF52840 MicroMod
+#**********************************************
+sfnrf52840pb.name=SparkFun MicroMod nRF52840 Processor Board
+
+# DFU Mode with CDC only
+sfnrf52840pb.vid.0=0x2341
+sfnrf52840pb.pid.0=0x005a
+
+# DFU Mode with CDC + MSC (UF2)
+sfnrf52840pb.vid.1=0x2341
+sfnrf52840pb.pid.1=0x805a
+
+# Application with CDC + MSC
+sfnrf52840pb.vid.2=0x2341
+sfnrf52840pb.pid.2=0x015a
+
+# CircuitPython
+sfnrf52840pb.vid.2=0x2341
+sfnrf52840pb.pid.2=0x015a
+
+
+sfnrf52840pb.bootloader.tool=bootburn
+
+# Upload
+sfnrf52840pb.upload.tool=nrfutil
+sfnrf52840pb.upload.protocol=nrfutil
+sfnrf52840pb.upload.use_1200bps_touch=true
+sfnrf52840pb.upload.wait_for_upload_port=true
+#sfnrf52840pb.upload.native_usb=true
+
+# Build
+sfnrf52840pb.build.mcu=cortex-m4
+sfnrf52840pb.build.f_cpu=64000000
+sfnrf52840pb.build.board=NRF52840_FEATHER
+sfnrf52840pb.build.core=nRF5
+sfnrf52840pb.build.variant=SF_MM_nRF52840_PB
+sfnrf52840pb.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+sfnrf52840pb.build.vid=0x2341
+sfnrf52840pb.build.pid=0x005a
+sfnrf52840pb.build.usb_manufacturer="SparkFun"
+sfnrf52840pb.build.usb_product="nRF52840 MicroMod"
+
+# SofDevice Menu
+# Ram & ROM size varies depending on SoftDevice (check linker script)
+
+sfnrf52840pb.menu.softdevice.s140v6=s140 6.1.1 r0
+sfnrf52840pb.menu.softdevice.s140v6.build.sd_flags=-DS140
+sfnrf52840pb.menu.softdevice.s140v6.build.sd_name=s140
+sfnrf52840pb.menu.softdevice.s140v6.build.sd_version=6.1.1
+sfnrf52840pb.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+sfnrf52840pb.menu.softdevice.s140v6.build.ldscript=nrf52840_s140_v6.ld
+sfnrf52840pb.menu.softdevice.s140v6.upload.maximum_size=815104
+sfnrf52840pb.menu.softdevice.s140v6.upload.maximum_data_size=248832
+
+# Debug Menu
+sfnrf52840pb.menu.debug.l0=Level 0 (Release)
+sfnrf52840pb.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0 -Os
+sfnrf52840pb.menu.debug.l1=Level 1 (Error Message)
+sfnrf52840pb.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1 -Os
+sfnrf52840pb.menu.debug.l2=Level 2 (Full Debug)
+sfnrf52840pb.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2 -Os
+sfnrf52840pb.menu.debug.l3=Level 3 (Segger SystemView)
+sfnrf52840pb.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3 -Os

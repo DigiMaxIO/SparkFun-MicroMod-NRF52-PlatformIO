@@ -14,5 +14,5 @@ Using the adafruit core gives the micromod access to the BluefruitNRF52 library 
 3. On your micromod board, double click the reset button and you should see a drive appear on your computer
 4. drag the uf2 file to the drive. Once you do that, the drive will automatically eject itself, meaning the bootloader has now been updated.
 
-![Image of the NRF52840 Micromod from SparkFun]([https://myoctocat.com/assets/images/base-octocat.svg](https://cdn.sparkfun.com/assets/parts/1/5/9/2/1/16984-SparkFun_MicroMod_nRF52840_Processor-04.jpg))
+![Image of the NRF52840 Micromod from SparkFun](https://cdn.sparkfun.com/assets/parts/1/5/9/2/1/16984-SparkFun_MicroMod_nRF52840_Processor-04.jpg)
 
